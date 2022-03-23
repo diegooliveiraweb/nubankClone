@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "nubankClone",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

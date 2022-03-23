@@ -1,0 +1,7 @@
+{
+  "name": "nubankClone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
