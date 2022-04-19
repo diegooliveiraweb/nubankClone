@@ -38,4 +38,11 @@ export default {
   box-sizing: border-box;
   font-family: GraphikRegular, GraphikMedium, "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+input{
+    border: none;
+    background: transparent;
+}
+input:focus{
+    outline: none;
+}
 </style>

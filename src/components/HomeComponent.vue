@@ -8,8 +8,8 @@
                         <div class="ion-padding user mb">
                             <ion-img :src="require('../assets/img/user.png')" class="img"></ion-img>
                         </div>
-                        <ion-text color="light">
-                            Olá, Diego
+                        <ion-text color="light" class="flex">
+                            Olá, <input type="text" v-model="name">
                         </ion-text>
                     </ion-col>
                     <ion-col size="4" class="ion-margin">
@@ -33,8 +33,8 @@
                     <ion-icon :icon="chevronForwardOutline" color="medium" class="conta"></ion-icon>
                 </ion-row>
                 <ion-row >
-                    <ion-text color="dark" class="saldo">
-                       R$ 23.579,90
+                    <ion-text color="dark" class="saldo flex">
+                       R$ <input type="text" v-model="saldo">
                        <Transition>
                             <span class="ocult" v-if="!showSaldo"></span>
                        </Transition>
@@ -100,7 +100,9 @@ export default {
   },
   data() {
       return {
-          showSaldo: true
+          showSaldo: true,
+          saldo: '23.579,90',
+          name: 'Diego'
       }
   },
   setup() {
@@ -178,6 +180,9 @@ export default {
     .cartoes ion-text{
        margin-left: 3%;
        font-size: 15px;
+    }
+    .flex{
+        display: flex;
     }
     .v-enter-active,
     .v-leave-active {

@@ -16,13 +16,13 @@
                             Fatura atual
                         </ion-text> 
                         <ion-text color="dark" class="fatura">
-                            R$ 320,39
+                            R$ <input type="text" v-model="fatura">
                             <Transition>
                                 <span class="ocult" v-if="!showFatura"></span>
                             </Transition>
                         </ion-text> 
                         <ion-text color="medium" class="xs">
-                            Limite disponível R$ 2.079,61
+                            Limite disponível R$ <input type="text" v-model="limite">
                         </ion-text> 
                         
                     </div>
@@ -35,15 +35,25 @@
 <script>
 import { IonGrid, IonRow, IonText,  IonIcon } from '@ionic/vue';
 import { chevronForwardOutline } from 'ionicons/icons';
+
+
 export default {
    name: 'CartaoDeCreditoComponent',
    components:{
        IonGrid, IonRow, IonText,  IonIcon
    },
    props:['showFatura'],
-   setup() {
-       return { chevronForwardOutline }
-   }
+    setup() {
+
+       return { chevronForwardOutline}
+    },
+   data() {
+       return {
+           fatura: '320,39',
+           limite: '2.079,61'
+       }
+   },
+   
 }
 </script>
 <style scoped>
@@ -82,6 +92,7 @@ export default {
         background: #f0f1f5;
         border-radius: 2px;
     }
+    
     .v-enter-active,
     .v-leave-active {
         transition: opacity 0.2s ease;
