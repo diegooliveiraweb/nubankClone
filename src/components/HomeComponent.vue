@@ -34,7 +34,7 @@
                 </ion-row>
                 <ion-row >
                     <ion-text color="dark" class="saldo flex">
-                       R$ <input type="text" v-model="saldo">
+                       R$ &nbsp; <input type="text" v-model="saldo">
                        <Transition>
                             <span class="ocult" v-if="!showSaldo"></span>
                        </Transition>
