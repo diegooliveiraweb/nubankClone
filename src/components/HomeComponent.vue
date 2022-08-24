@@ -9,7 +9,7 @@
                             <ion-img :src="require('../assets/img/user.png')" class="img"></ion-img>
                         </div>
                         <ion-text color="light" class="flex">
-                            Olá, <input type="text" v-model="name">
+                            Olá,&nbsp;<input type="text" v-model="name">
                         </ion-text>
                     </ion-col>
                     <ion-col size="4" class="ion-margin">
