@@ -9,7 +9,7 @@
                             <ion-img :src="require('../assets/img/user.png')" class="img"></ion-img>
                         </div>
                         <ion-text color="light" class="flex">
-                            Olá,&nbsp;<input type="text" v-model="name">
+                            Olá,<input type="text" v-model="name" style="margin-left: 5px;">
                         </ion-text>
                     </ion-col>
                     <ion-col size="4" class="ion-margin">
@@ -34,7 +34,7 @@
                 </ion-row>
                 <ion-row >
                     <ion-text color="dark" class="saldo flex">
-                       R$ &nbsp; <input type="text" v-model="saldo">
+                       R$ <input type="text" v-model="saldo" style="margin-left: 5px;">
                        <Transition>
                             <span class="ocult" v-if="!showSaldo"></span>
                        </Transition>
